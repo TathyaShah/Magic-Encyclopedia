@@ -1,78 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&display=swap');
-body{
-    font-family: 'Poppins', 'sans-serif';
-}
-a{
-    color: aliceblue;
-    display: inline-block;
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(0, 195, 255);
-    transition: 2ms ease-in-out;
-}
 .flex{
     display: flex;
-    align-items: center;
 }
-.hogwarts{
+body{
+    background-color: rgb(22, 22, 39);
+    overflow-x: hidden;
+
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+h2{
+    font-family: poppins;
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+}
+.navbar{
+    background-image: url(./assets/hogwartsff.jpg);
+    background-size: cover;
     width: 100%;
-    position: absolute;
+    height: auto;
+    padding-bottom: 600px;
+    background-repeat:no-repeat;
+    justify-content: space-between;
+}
+.menu a{
+    color: rgb(0, 8, 255);
+    font-family: poppins;
+    font-size: larger;
+    font-weight: bolder;
 }
 .menu{
-    
-    padding-top: 10px;
-    position: relative;
-    justify-content: space-between;
-    gap: 30px;
-    justify-content: flex-end;
+    padding-top: 45px;
+    padding-right: 45px;
+    gap: 40px;
 }
-.search{
-    background-color: rgb(136, 0, 255);
-    padding: 3px 10px;
-    border-radius: 10px;
+.harrypotterww{
+    width: 220px;
+    align-items: center;
+    /* margin-left: 120px; */
 }
-.welcome{
-    font-family: 'Poppins','sans-serif';
-    color: rgb(238, 255, 0);
+input::placeholder{
+    font-family: Poppins;
+    color: rgb(0, 8, 255);
     font-size: large;
-    position: absolute;
-    padding-top: 33%;
-    padding-left: 5%;
-    z-index: 1;
+    align-items: center;
 }
-.teams{
-    justify-content: space-between;
+.btn{
+    border: 3px solid blue;
+    border-radius: 50px;
+    background-color:rgb(0, 213, 255);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-weight: bolder;
 }
-/* .teams img{
-    padding-top: 55%;
-    gap: 40px;
-    max-width: 23%;
-    z-index: 1;
+.circle{
+    padding-top: 45px;
+    padding-left: 45px;
+    color: aqua;
 }
-.name{
-    max-width: 100%;
-    gap: 40px;
-    justify-content: space-between;
-} */
-.teams{
-    max-width: 23%;
-    padding-top: 55%;
-    position: relative;
-    z-index: 1;
+.hogwarts h2{
+    padding-top: 10%;
+    padding-left: 40%;
 }
-.single{
-    flex-direction: column;
+.hogwarts p{
+    padding: 0px 180px;
+    font-family: poppins;
+    max-width:550px ;
+    font-size: larger;
+    font-weight: bold;
+    text-align: justify;
+    color: rgb(0, 0, 0);
 }
-.single h2{
-    color:#FF914D;
-    /* -webkit-text-stroke:1px black; */
-    font-family: 'barlow condensed';
-    font-size:2.8rem;
-    margin-top: 145%;
-    position: absolute;
-    background-color: red;
-    padding: 6px 16px;
-    border-radius: 15px;
+.hogwarts{
+    background-image: url(./assets/manuscript.png);
+    padding-bottom: 100px;
+    background-position: center;
+    background-size:cover;
+    justify-content:center;
+    background-repeat: no-repeat;
 }
