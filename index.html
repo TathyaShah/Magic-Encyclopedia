@@ -7,6 +7,9 @@
     <title>Magic Encyclopedia</title>
 </head>
 <body>
+    <!-- <div class="object">
+        <img src="./assets/a-wizard-boy-riding-a-broom-with-his-magic-skills-background-free-vector-removebg-preview (1).png" alt="">
+    </div> -->
     <!-- Sidebar -->
     <label>
         <input type="checkbox">
@@ -17,12 +20,54 @@
         </div>
         <div class="sidenav">
             <h1>Filter</h1>
+            
             <ul class="list">
-                <li><a href="#">By Magical Objects</a></li>
-                <li><a href="#">By Pets</a></li>
-                <li><a href="#">By Teams</a></li>
-                <li><a href="#">By Spells</a></li>
-                <li><a href="#">By Alphabets</a></li>
+                <li class="dropdown"><a href="#">Magical Objects<span>&rsaquo;</span></a>
+                    <ul class="magical_objects">
+                        <li><a href="#">Transportation</a></li>
+                        <li><a href="#">Communication</a></li>
+                        <li><a href="#">Storage</a></li>
+                        <li><a href="#">Tools & Weapons</a></li>
+                        <li><a href="#">Weapons</a></li>
+                        <li><a href="#">Artifacts</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Dark Objects</a></li>
+                        <li><a href="#">Food & Drink</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Plants & Animals</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="#">Pets<span>&rsaquo;</span></a>
+                    <ul class="pets">
+                        <li><a href="#">Species</a></li>
+                        <li><a href="#">Magical Ability</a></li>
+                        <li><a href="#">Role</a></li>
+                        <li><a href="#">Personality</a></li>
+                        <li><a href="#">Intelligent</a></li>
+                        <li><a href="#">Lifespan</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Skills<span>&rsaquo;</span></a>
+                    <ul class="skills">
+                        <li><a href="#">Power</a></li>
+                        <li><a href="#">Knowlegde</a></li>
+                        <li><a href="#">Protection</a></li>
+                        <li><a href="#">Mystery</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Teams<span>&rsaquo;</span></a>
+                    <ul class="teams">
+                        <li><a href="#">Gryffindor</a></li>
+                        <li><a href="#">Slytherin</a></li>
+                        <li><a href="#">Ravenclaw</a></li>
+                        <li><a href="#">Hufflepuff</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Beasts</a></li>
+                <li><a href="#">Spells</a></li>
+                <li><a href="./alphabets.html" target="_blank">Alphabets</a></li>
             </ul>
         </div>
     </label>
@@ -33,6 +78,7 @@
         <img src="./assets/harrypotterww-removebg-preview.png" class="harrypotterww" alt="">
         <div class="menu flex">
             <a href="#" class="btn">Menu</a>
+            <a href="#" class="btn">Favs</a>
             <input type="text" placeholder="Search" class="btn">
         </div>
     </section>
@@ -52,6 +98,7 @@
         </div>
     </section>
     
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/2c35cb5dcf.js" crossorigin="anonymous"></script>
 </body>
 </html>
