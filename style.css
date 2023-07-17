@@ -32,7 +32,7 @@ h3{
     padding: 20px;
 }
 .navbar{
-    background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.9)), url(./assets/harrypflying.jpg);
+    background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.9)), url(./harrypflying.jpg);
     background-size: cover;
     width: 100%;
     height: auto;
@@ -93,7 +93,7 @@ input::placeholder{
     color: aqua;
 }
 .hogwarts{
-    background: linear-gradient(rgb(9, 9, 9,0.5),rgba(11, 32, 53, 0.9)), url(./assets/bg.jpg);
+    background: linear-gradient(rgb(9, 9, 9,0.5),rgba(11, 32, 53, 0.9)), url(./bg.jpg);
     background-size:contain;
     background-blend-mode: overlay;
     width: 100%;
