@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="single flex">
+    <div class="search-container">
+        <input type="text" placeholder="Search" class="btn" id="searchInput">
+    </div>
+
+    <div class="card-container flex">
         <div class="popup" id="popup-1">
-            <div class="overlay"></div>
+        <div class="overlay"></div>
             <div class="contenta" id="c1">
                 <div class="close-btn" onclick="togglePopup(ids)">&times;</div>
                 <h2 id="h1">Blackboard</h2>
@@ -17,8 +21,7 @@
                 <p id="p1">Blackboard bohot hi acha hai</p>
             </div>
         </div>
-        <div class="content" onclick="togglePopup(ids)">
-            <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+        <div class="content" onclick="togglePopup(ids)" data-title="Black">
             <h2>Black</h2>
             <img src="./blackboard.png" alt="">
         </div>
@@ -34,12 +37,11 @@
                 <p id="p2">Cricket is a good game</p>
             </div>
         </div>
-        <div class="content" onclick="togglePopup(ids)">
-            <a href="#"><i class="fa-regular fa-heart heart"></i></a>
+        <div class="content" onclick="togglePopup(ids)" data-title="Bakwaas">
             <h2>Bakwaas</h2>
             <img src="./hogwartsff.jpg" alt="">
         </div>
-
+    </div>
 
 
 

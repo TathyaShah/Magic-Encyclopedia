@@ -62,32 +62,30 @@ input::placeholder{
     font-size: large;
     align-items: center;
 }
-.btn{
+.btn ~#searchInput{
     border: 3px solid blue;
     border-radius: 50px;
-    background-color:rgb(0, 213, 255);
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    font-weight: bolder;
-}
-/* .btn1{
-    cursor: pointer;
-    border: 3px solid blue;
-    border-radius: 15px;
-    background-color:rgb(0, 213, 255);
-    width: 190px;
-    height: 50px;
+    background-color:aqua;
+    width: 130px;
+    height: 45px;
     color: blue;
     text-align: center;
-    font-size: 17px;
+    align-items: center;
     font-weight: bolder;
-    margin-top: 0px;
-    width: 20%;
-    margin-left: 45px;
-    max-width: 23%;
-} */
-
+}
+#searchInput{
+    float: right;
+    margin: 10px 10px;
+    border: 3px solid blue;
+    border-radius: 50px;
+    background-color:aqua;
+    width: 130px;
+    height: 45px;
+    color: blue;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
 .circle{
     padding: 50px 50px;
     color: aqua;
@@ -123,7 +121,7 @@ input::placeholder{
     border: 3px solid blue;
     border-radius: 50px;
     background-color:rgb(0, 213, 255);
-    width: 120px;
+    width: 190px;
     height: 50px;
     text-align: center;
     font-weight: bolder;
@@ -305,7 +303,7 @@ ul li:hover a{
     width: 93%;
     height: 80%;
     border-radius: 15px;
-    margin: 0 -8px;
+    margin: 0px -8px;
 }
 .content h2{
     font-family: poppins;
@@ -314,7 +312,7 @@ ul li:hover a{
     align-items: center;
     font-size: 22px;
     margin-left: 15px;
-    margin-top: -30px;
+    margin-top: -10px;
     margin-bottom: 5px;
 }
 .content p{
@@ -418,14 +416,60 @@ ul li:hover a{
     transform: translate(-50%,-50%) scale(2.2);
 }
 .heart{
-    margin-left: -160px;
     font-size: 22px;
 }
-.single{
+.card-container{
     flex-wrap: wrap;
 }
-.popup p:nth-child(1){
-    color: brown;
-    font-family: poppins;
+
+.highlight {
+background-color: yellow;
 }
 /* popup ends */
+/* .add-to-favorites{
+    cursor: pointer;
+    text-align: center;
+    margin-top: 6px;
+    margin-left:30px ;
+    width: 227px;
+    border-radius: 15px;
+    font-size: large;
+}
+#favorites-container {
+    font-family: poppins;
+    color: blue;
+    background-color: yellow;
+    font-size: x-large;
+    float: right;
+    height:98.3vh;
+    width: 33%;
+    margin-top: -280px;
+    margin-right: 5px;
+    border: 2px solid white;
+    text-align: center;
+}
+#favorites-container h2{
+    margin-bottom: 0px;
+}
+#favorites-list {
+    padding-left: 10px;
+}
+
+.favorite-card {
+    position: relative;
+}
+
+.remove-from-favorites {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    background-color: aqua;
+    color: blue;
+    border: 3px solid blue;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 0px;
+    margin-right: 60px;
+    cursor: pointer;
+} */

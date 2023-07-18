@@ -14,7 +14,6 @@
 
     #favorites-container {
         margin-top: 20px;
-        padding-top: 10px;
     }
 
     #favorites-list {
@@ -95,6 +94,10 @@
 
         // Add the card to the added cards array
         addedCards.push(card);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'favs.html');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(user));
     }
 
     // Function to handle removing a card from favorites
@@ -116,3 +119,5 @@
 </script>
 
 </html>
+
+
