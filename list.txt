@@ -1,0 +1,17 @@
+OBJECTS:
+a) Transportation:
+1. Broomstick
+2. Flying Carpets
+3. Hogwarts Express
+4. Portkeys
+
+b) Communication
+1. Floo Networks
+2. Owls
+3. Howlers
+
+c) Storage
+1. Trunks
+2. Bags
+3. Mokeskin Pouches
+4.

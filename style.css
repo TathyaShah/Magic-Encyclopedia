@@ -46,6 +46,7 @@ h3{
     font-family: poppins;
     font-size: larger;
     font-weight: bolder;
+    align-items: center;
 }
 .menu{
     padding-top: 45px;
@@ -73,14 +74,13 @@ input::placeholder{
     align-items: center;
     font-weight: bolder;
 }
-#searchInput{
-    float: right;
-    margin: 10px 10px;
+.menu-btn{
     border: 3px solid blue;
     border-radius: 50px;
     background-color:aqua;
     width: 130px;
-    height: 45px;
+    height: 40px;
+    padding-top: 6px;
     color: blue;
     text-align: center;
     align-items: center;
@@ -91,9 +91,9 @@ input::placeholder{
     color: aqua;
 }
 .hogwarts{
-    background: linear-gradient(rgb(9, 9, 9,0.5),rgba(11, 32, 53, 0.9)), url(./bg.jpg);
+    background: linear-gradient(rgb(9, 9, 9,0.5),rgba(17, 11, 53, 0.9)), url(./bg.jpg);
     background-size:contain;
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
     width: 100%;
     height: auto;
     background-repeat:no-repeat;
@@ -120,7 +120,7 @@ input::placeholder{
     margin-top: 48px;
     border: 3px solid blue;
     border-radius: 50px;
-    background-color:rgb(0, 213, 255);
+    background-color:aqua;
     width: 190px;
     height: 50px;
     text-align: center;
@@ -426,6 +426,57 @@ ul li:hover a{
 background-color: yellow;
 }
 /* popup ends */
+#filter{
+    font-family: poppins;
+    font-size: large;
+    float: right;
+    margin: 10px 10px;
+    border: 3px solid blue;
+    border-radius: 50px;
+    background-color:aqua;
+    width: 130px;
+    height: 50px;
+    color: blue;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+#searchInput{
+    float: right;
+    margin: 10px 10px;
+    border: 3px solid blue;
+    border-radius: 50px;
+    background-color:aqua;
+    width: 130px;
+    height: 45px;
+    color: blue;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.flying {
+    display: none;
+}
+
+.aquatic {
+    display: none;
+}
+
+.magical {
+    display: none;
+}
+.header{
+    float: right;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
 /* .add-to-favorites{
     cursor: pointer;
     text-align: center;

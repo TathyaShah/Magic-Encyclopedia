@@ -112,3 +112,19 @@ searchInput.addEventListener('input', (event) => {
     filterCards(searchTerm);
 });
 
+// Function called when the filter is changed
+function filterCreatures() {
+    const selectedFilter = document.getElementById('filter').value;
+    const cards = document.querySelectorAll('.content');
+
+    cards.forEach(card => {
+        if (selectedFilter === 'all' || card.classList.contains(selectedFilter)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Initially show all creatures
+filterCreatures();
