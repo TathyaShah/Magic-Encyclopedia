@@ -285,9 +285,10 @@ ul li:hover a{
 .content{
     max-width: 30vh;
     max-height: 40vh;
-    margin-top: 45px;
+    margin-top: 15px;
     margin-left: 30px;
     margin-right: 20px;
+    margin-bottom: 20px;
     justify-content: space-between;
     box-sizing: border-box;
     text-align: center;
@@ -419,6 +420,7 @@ ul li:hover a{
     font-size: 22px;
 }
 .card-container{
+    margin-top: -10px;
     flex-wrap: wrap;
 }
 
@@ -466,13 +468,19 @@ background-color: yellow;
     display: none;
 }
 .header{
+    margin-top: -20px;
+    padding-right: 20px;
     float: right;
     flex-wrap: wrap;
 }
 
-
-
-
+.single{
+    padding-top: 0;
+    flex-wrap: wrap;
+}
+.letter{
+    margin-left: 15px;
+}
 
 
 
