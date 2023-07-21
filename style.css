@@ -2,6 +2,17 @@
 .flex{
     display: flex;
 }
+::-webkit-scrollbar{
+    background-color: black;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,aqua);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00c6ff);
+}
 body{
     background-color: rgb(85, 0, 255);
     overflow-x: hidden;
@@ -91,10 +102,10 @@ input::placeholder{
     color: aqua;
 }
 .hogwarts{
-    background: linear-gradient(rgb(9, 9, 9,0.5),rgba(17, 11, 53, 0.9)), url(./bg.jpg);
-    background-size:contain;
+    background: url(./bg.jpg);
+    background-size:cover;
     /* background-blend-mode: overlay; */
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-repeat:no-repeat;
     text-align: center;
@@ -283,7 +294,9 @@ ul li:hover a{
 
 /* Card */
 .content{
-    max-width: 30vh;
+    width: 32vh;
+    height: 30vh;
+    max-width: 33vh;
     max-height: 40vh;
     margin-top: 15px;
     margin-left: 30px;

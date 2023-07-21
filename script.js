@@ -1,15 +1,14 @@
-let ids=["popup-1","popup-2","popup-3","popup-4","popup-5"];
-function togglePopup(ids){
-        for(let i=0;i<=ids.length;i++){
-            const id=ids[i];
-            document.getElementById(id).classList.toggle("active");
-        }
+function togglePopup(popupId) {
+    const popupElement = document.getElementById(popupId);
+    if (popupElement) {
+        popupElement.classList.toggle("active");
+    }
 }
 
 // search function
 const searchInput = document.getElementById('searchInput');
 const cardContainer = document.querySelector('.card-container');
-const cards = cardContainer.querySelectorAll('.content');
+const cards = document.querySelectorAll('.content');
 
 function displayCards(filteredCards) {
     cards.forEach((card) => {
