@@ -14,5 +14,10 @@
     <div class="new">
         <h1>Dont have an account? Sign up <a href="/signup">here</a></h1>
     </div>
+    <div>
+        {% if login_message_error %}
+            <h3>{{login_message_error}}</h3>
+            {% endif %}
+    </div>
 </body>
 </html>

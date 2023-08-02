@@ -8,13 +8,6 @@
 </head>
 <body>
     <h1>Signup</h1>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
     <form action="/signup" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
@@ -22,6 +15,17 @@
     </form>
     <div class="old">
         <h1>Already have an account? Login <a href="/login">here</a></h1>
+    </div>
+    <div>
+        {% if signup_message_error %}
+            <h3>{{signup_message_error}}</h3>
+            {% endif %}
+        {% if existing_user %}
+            <h3>{{existing_user}}</h3>
+            {% endif %}
+        {% if account_created %}
+            <h3>{{account_created}}</h3>
+            {% endif %}
     </div>
 </body>
 </html>
