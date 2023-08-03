@@ -505,3 +505,8 @@ background-color: yellow;
 }
 /* Add this CSS in your main CSS file or in the respective component's CSS file */
 
+.test{
+    color: red;
+    border: 2px solid black;
+    display: block;
+}

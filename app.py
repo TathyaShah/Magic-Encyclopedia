@@ -4,8 +4,8 @@ import bcrypt
 
 app = Flask(__name__, template_folder='template')
 app.secret_key='magic_encyclopedia'
-app.config["MONGO_URI"] = "mongodb://localhost:27017/users"
-mongo = PyMongo(app)
+mongo1 = PyMongo(app, uri="mongodb://localhost:27017/users")
+mongo2 = PyMongo(app, uri="mongodb://localhost:27017/objects")
 
 @app.route('/')
 def index():
@@ -18,8 +18,19 @@ def index():
     return render_template('index.html')
 
 @app.route('/alphabets')
-def alphabets():
-    return render_template('alphabets.html')
+def display_data():
+    details = list(mongo2.db.info.find())
+
+    # Group items based on the first letter of the heading
+    grouped_details = {}
+    for item in details:
+        category=item['category']
+        first_letter = item['heading'][0].upper()
+        if first_letter not in grouped_details:
+            grouped_details[first_letter] = []
+        grouped_details[first_letter].append(item)
+    grouped_details = dict(sorted(grouped_details.items()))
+    return render_template('alphabets.html', grouped_details=grouped_details)
 
 @app.route('/login', methods=['GET'])
 def login_form():
@@ -32,7 +43,7 @@ def login():
         password = request.form.get('password')
 
         # Check if the user credentials are valid in the MongoDB database
-        user = mongo.db.details.find_one({'username': username, 'password': password})
+        user = mongo1.db.details.find_one({'username': username, 'password': password})
 
         if user:
             # If the user is found, redirect to the home page
@@ -59,7 +70,7 @@ def signup():
             return render_template('signup.html',signup_message_error=signup_message_error)
         
         # Check if the username already exists in the database
-        existing_user = mongo.db.details.find_one({'username': username})
+        existing_user = mongo1.db.details.find_one({'username': username})
 
         if existing_user:
             # If the username is already registered, redirect to login with a message
@@ -67,10 +78,11 @@ def signup():
             return render_template('signup.html',existing_user=existing_user)
         else:
             # If the username is not registered, create a new account
-            mongo.db.details.insert_one({'username': username, 'password': password})
+            mongo1.db.details.insert_one({'username': username, 'password': password})
             account_created="Account created. Now please log in again"
             return render_template('signup.html',account_created=account_created)         
     return redirect('/')
+
 
 
 if __name__== '__main__':

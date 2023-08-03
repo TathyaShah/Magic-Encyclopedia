@@ -42,15 +42,12 @@ searchInput.addEventListener('input', (event) => {
 function filterCreatures() {
     const selectedFilter = document.getElementById('filter').value;
     const cards = document.querySelectorAll('.content');
-    const lettera= document.getElementById('a');
 
     cards.forEach(card => {
         if (selectedFilter === 'all' || card.classList.contains(selectedFilter)) {
             card.style.display = 'block';
-            lettera.style.display='block';
         } else {
             card.style.display = 'none';
-            lettera.style.display='none';
         }
     });
 }
