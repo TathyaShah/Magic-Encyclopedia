@@ -22,6 +22,8 @@
     </div>
 
 
+    <h3>Lets browse some magical objects, {{ username }}</h3>
+
 
     {% for letter, items in grouped_details.items() %}
     <div class="card-container" id="{{ letter }}">
@@ -40,7 +42,12 @@
                 </div>
             </div>
             <div class="content {{item.category}}" onclick="togglePopup('popup-{{ item._id }}')" data-title="{{ item.heading }}">
-                <h2>{{ item.heading }}</h2>
+                <div class="heading flex">
+                    <form action="/add_to_favorites/{{ item._id }}" method="post">
+                        <button type="submit"><i class="fa-regular fa-heart favorite"></i></button>
+                    </form>
+                    <h2>{{ item.heading }}</h2>
+                </div>
                 <img src="{{ item.image_url }}" alt="">
             </div>
             {% endfor %}

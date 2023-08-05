@@ -68,6 +68,7 @@
                 <li><a href="#">Beasts</a></li>
                 <li><a href="#">Spells</a></li>
                 <li><a href="/alphabets" target="_blank">Alphabets</a></li>
+                <li><a href="/favorites">Favorites</a></li>
             </ul>
         </div>
     </label>
@@ -77,13 +78,12 @@
         <a href="#" class="threedash"><i class="fa-solid fa-bars fa-2xl circle"></i></a>
         <img src="/static/harrypotterww-removebg-preview.png" class="harrypotterww" alt="">
         <div class="menu flex">
-            <a href="#" class="menu-btn">Menu</a>
-            {% if username %}
-            <h3>Welcome, {{ username }}</h3>
-            <a href="/" class="btn">Logout</a>
+            {% if logged_in %}
+            <h3>Hello, {{ user_data.username }}!</h3>
+            <a href="/logout" class="btn">Logout</a>
             {% else %}
             <a href="/login" class="btn">Login</a>
-            <a href="/signup" class="btn1">Signup</a>
+            <a href="/signup" class="btn">Signup</a>
             {% endif %}
         </div>
     </section>

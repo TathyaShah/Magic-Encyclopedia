@@ -325,7 +325,8 @@ ul li:hover a{
     color: blue;
     align-items: center;
     font-size: 22px;
-    margin-left: 15px;
+    width: 100%;
+    margin-left: -10px;
     margin-top: -10px;
     margin-bottom: 5px;
 }
@@ -429,9 +430,6 @@ ul li:hover a{
     transition: all 580ms ease-in-out;
     transform: translate(-50%,-50%) scale(2.2);
 }
-.heart{
-    font-size: 22px;
-}
 .card-container{
     margin-top: -10px;
     flex-wrap: wrap;
@@ -505,8 +503,19 @@ background-color: yellow;
 }
 /* Add this CSS in your main CSS file or in the respective component's CSS file */
 
-.test{
+
+.heading{
+    padding-bottom: 5px;
+}
+.heading button{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.heading button:hover{
     color: red;
-    border: 2px solid black;
-    display: block;
 }
