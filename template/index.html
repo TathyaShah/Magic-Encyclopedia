@@ -76,14 +76,14 @@
     <!-- Navbar -->
     <section class="navbar flex">
         <a href="#" class="threedash"><i class="fa-solid fa-bars fa-2xl circle"></i></a>
-        <img src="/static/harrypotterww-removebg-preview.png" class="harrypotterww" alt="">
+        <!-- <img src="/static/harrypotterww-removebg-preview.png" class="harrypotterww" alt=""> -->
         <div class="menu flex">
             {% if logged_in %}
             <h3>Hello, {{ user_data.username }}!</h3>
-            <a href="/logout" class="btn">Logout</a>
+            <a href="/logout" class="login_btn">Logout</a>
             {% else %}
-            <a href="/login" class="btn">Login</a>
-            <a href="/signup" class="btn">Signup</a>
+            <a href="/login" class="login_btn">Login</a>
+            <a href="/signup" class="login_btn">Signup</a>
             {% endif %}
         </div>
     </section>

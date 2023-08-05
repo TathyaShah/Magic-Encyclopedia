@@ -14,7 +14,7 @@
     background: linear-gradient(transparent,#00c6ff);
 }
 body{
-    background-color: rgb(85, 0, 255);
+    background-color: rgb(0, 67, 150);
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
@@ -45,9 +45,9 @@ h3{
 .navbar{
     background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.9)), url(./harrypflying.jpg);
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: auto;
-    padding-bottom: 600px;
+    padding-bottom: 640px;
     background-repeat:no-repeat;
     justify-content: space-between;
     background-blend-mode: overlay;
@@ -63,6 +63,10 @@ h3{
     padding-top: 45px;
     padding-right: 45px;
     gap: 40px;
+}
+.menu h3{
+    margin: 0;
+    padding: 0;
 }
 .harrypotterww{
     width: 220px;
@@ -93,6 +97,19 @@ input::placeholder{
     height: 40px;
     padding-top: 6px;
     color: blue;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.login_btn{
+    width: 100%;
+    border: 3px solid blue;
+    border-radius: 15px;
+    background-color:aqua;
+    width: 130px;
+    height: 40px;
+    color: blue;
+    padding-top: 8px;
     text-align: center;
     align-items: center;
     font-weight: bolder;
@@ -146,7 +163,7 @@ input::placeholder{
 }
 /* Side Navigation Starts */
 .sidenav{
-    margin: 0;
+    margin: 0px;
     padding: 0;
     background-color: aqua;
     height: 100%;
@@ -160,14 +177,15 @@ input::placeholder{
     font-size: 50px;
     color: blue;
     text-align: center;
-    padding: 20px 0;
+    padding: 55px 0;
     pointer-events: none;
 }
 ul{
     text-align: center;
-    margin-top: 0;
+    margin-top: -60px;
     margin-left: 0;
     padding-left: 0;
+    font-size: large;
 }
 ul li{
     padding: 6px 0;
@@ -195,8 +213,8 @@ input:not(.btn){
     z-index: 1;
     background-color: red;
     cursor: pointer;
-    top: 20px;
-    left: 15px;
+    top: 40px;
+    left: 35px;
     align-items: center;
     text-align: center;
     border: 3px solid blue;

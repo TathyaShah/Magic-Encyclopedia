@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="/static/signup.css">
     <title>Sign Up</title>
 </head>
 <body>
-    <h1>Signup</h1>
+    <div class="signup">
+        <h1 id="text">Signup</h1>
     <form action="/signup" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="SignUp">
+        <input type="text" name="username" placeholder="Username" class="username">
+        <input type="password" name="password" placeholder="Password" class="password">
+        <input type="submit" value="SignUp" id="signup_btn">
     </form>
-    <div class="old">
-        <h1>Already have an account? Login <a href="/login">here</a></h1>
+    <div class="new">
+        <h2>Already have an account?  <a href="/login" id="login">Login</a></h2>
     </div>
     <div>
         {% if signup_message_error %}
             <h3>{{signup_message_error}}</h3>
             {% endif %}
-        {% if existing_user %}
-            <h3>{{existing_user}}</h3>
+        {% if existinguser %}
+            <h3>{{existinguser}}</h3>
             {% endif %}
         {% if account_created %}
             <h3>{{account_created}}</h3>
             {% endif %}
     </div>
+</div>
+<div class="colors">
+    <span class="active" onclick="changeColor('#1dd1a1')" style="--clr:#1dd1a1;"></span>
+    <span onclick="changeColor('#ff6b6b')" style="--clr:#ff6b6b;"></span>
+    <span onclick="changeColor('#2e68de')" style="--clr:#2e68de;"></span>
+    <span onclick="changeColor('#f368e0')" style="--clr:#f368e0;"></span>
+    <span onclick="changeColor('#ff9f43')" style="--clr:#ff9f43;"></span>
+</div>
+    
+    <script>
+        let btn=document.getElementById('signup_btn')
+        let txt=document.getElementById('text')
+        let login=document.getElementById('login')
+        function changeColor(color){
+            document.body.style.background=color;
+            btn.style.background=color;
+            text.style.borderColor=color;
+            login.style.color=color;
+
+            document.querySelectorAll('span').forEach(function(item){
+                item.classList.remove("active");
+            })
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>

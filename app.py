@@ -113,12 +113,12 @@ def signup():
         existing_user = mongo1.db.details.find_one({'username': username})
 
         if existing_user:
-            existing_user="User already exists, please login"
-            return redirect('/login',existing_user=existing_user)
+            existinguser="User already exists, please login"
+            return render_template('signup.html',existinguser=existinguser)
         else:
             mongo1.db.details.insert_one({'username': username, 'password': password})
             account_created="Account created. Now please log in again"
-            return redirect('/login',account_created=account_created)         
+            return render_template('signup.html',account_created=account_created)         
     return redirect('/')
 
 
