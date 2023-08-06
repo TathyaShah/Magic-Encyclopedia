@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Pets</title>
+</head>
+<body>
+    <div class="header flex">
+        <div class="filter-container">
+            <select id="filter" onchange="filterCreatures()">
+                <option value="all">All</option>
+                <option value="species">Species</option>
+                <option value="ability">Abilities</option>
+                <option value="role">Role</option>
+                <option value="personality">Personality</option>
+                <option value="intelligence">Intelligence</option>
+                <option value="lifespan">Lifespan</option>
+            </select>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search" class="btn" id="searchInput">
+        </div>
+    </div>
+    <h3><a href="/" class="home"><i class="fa-solid fa-house" style="color: #00ffff;"></i></i></a></h3>
+    <h3>Hello {{username}} ! Here are the pets</h3>
+    <div class="single flex">
+        {% for item in items %}
+        <div class="popup" id="popup-{{ item._id }}">
+            <div class="overlay"></div>
+            <div class="contenta">
+                <div class="close-btn" onclick="togglePopup('popup-{{ item._id }}')">&times;</div>
+                <h2>{{ item.heading }}</h2>
+                <img src="{{ item.image_url }}" alt="">
+                <p>{{ item.content }}</p>
+            </div>
+        </div>
+        <div class="content {{item.sub_category}}" onclick="togglePopup('popup-{{ item._id }}')" data-title="{{ item.heading }}">
+            <div class="heading flex">
+                <form action="/add_to_favorites/{{ item._id }}" method="post" id="addToFavoritesForm">
+                    <button type="submit"><i class="fa-regular fa-heart favorite"></i></button>
+                </form>
+                <h2>{{ item.heading }}</h2>
+            </div>
+            <img src="{{ item.image_url }}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+    <script src="/static/script.js"></script>
+    <script src="https://kit.fontawesome.com/2c35cb5dcf.js" crossorigin="anonymous"></script>
+</body>
+</html>

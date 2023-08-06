@@ -33,7 +33,7 @@ def display_data():
         grouped_details = dict(sorted(grouped_details.items()))
         return render_template('alphabets.html', username=username, grouped_details=grouped_details)
     else:
-        return "Please log in to access this route."
+        return render_template('error.html')
 
 @app.route('/add_to_favorites/<object_id>', methods=['POST'])
 def add_to_favorites(object_id):
@@ -45,7 +45,7 @@ def add_to_favorites(object_id):
             mongo1.db.details.update_one({'username': username}, {'$pull': {'favorites': object_id}})
         else:
             mongo1.db.details.update_one({'username': username}, {'$push': {'favorites': object_id}})
-        return redirect(url_for('display_data'))
+        return redirect(request.referrer)
 
 @app.route('/remove_from_favorites/<object_id>', methods=['POST'])
 def remove_from_favorites(object_id):
@@ -55,8 +55,6 @@ def remove_from_favorites(object_id):
     if username:
         mongo1.db.details.update_one({'username': username}, {'$pull': {'favorites': object_id}})
         return redirect(url_for('favorites'))
-    else:
-        return "Please log in to access this route."
 
 
 @app.route('/favorites', methods=['GET'])
@@ -70,7 +68,7 @@ def favorites():
 
         return render_template('favorites.html', username=username, favorites_data=favorites_data)
     else:
-        return "Please log in to access this route."
+        return render_template('error.html')
 
 @app.route('/login', methods=['GET'])
 def login_form():
@@ -121,7 +119,47 @@ def signup():
             return render_template('signup.html',account_created=account_created)         
     return redirect('/')
 
+@app.route('/magical', methods=['GET','POST'])
+def magical():
+    username = session.get('username')
+    magical_obj=list(mongo2.db.info.find({'category':'magical'}))
+    return render_template('magical.html', username=username, items=magical_obj)
 
+@app.route('/pets', methods=['GET','POST'])
+def pets():
+    username = session.get('username')
+    pets=list(mongo2.db.info.find({'category':'pets'}))
+    return render_template('pets.html', username=username, items=pets)
+
+@app.route('/skills', methods=['GET','POST'])
+def skills():
+    username = session.get('username')
+    skills=list(mongo2.db.info.find({'category':'skills'}))
+    return render_template('skills.html', username=username, items=skills)
+
+@app.route('/teams', methods=['GET','POST'])
+def teams():
+    username = session.get('username')
+    teams=list(mongo2.db.info.find({'category':'teams'}))
+    return render_template('teams.html', username=username, items=teams)
+
+@app.route('/characters', methods=['GET','POST'])
+def characters():
+    username = session.get('username')
+    characters=list(mongo2.db.info.find({'category':'characters'}))
+    return render_template('characters.html', username=username, items=characters)
+
+@app.route('/beasts', methods=['GET','POST'])
+def beasts():
+    username = session.get('username')
+    beasts=list(mongo2.db.info.find({'category':'beasts'}))
+    return render_template('beasts.html', username=username, items=beasts)
+
+@app.route('/spells', methods=['GET','POST'])
+def spells():
+    username = session.get('username')
+    spells=list(mongo2.db.info.find({'category':'spells'}))
+    return render_template('spells.html', username=username, items=spells)
 
 if __name__== '__main__':
     app.run(debug=True)

@@ -11,19 +11,25 @@
         <div class="filter-container">
             <select id="filter" onchange="filterCreatures()">
                 <option value="all">All</option>
-                <option value="flying">Flying</option>
-                <option value="aquatic">Aquatic</option>
                 <option value="magical">Magical</option>
+                <option value="pets">Pets</option>
+                <option value="skills">Skills</option>
+                <option value="teams">Teams</option>
+                <option value="characters">Characters</option>
+                <option value="beasts">Beasts</option>
+                <option value="spells">Spells</option>
             </select>
         </div>
         <div class="search-container">
             <input type="text" placeholder="Search" class="btn" id="searchInput">
         </div>
+        <div class="fav">
+            <a href="/favorites" class="btn">Your Favorites</a>
+        </div>
     </div>
 
-
+    <h3><a href="/" class="home"><i class="fa-solid fa-house" style="color: #00ffff;"></i></i></a></h3>
     <h3>Lets browse some magical objects, {{ username }}</h3>
-
 
     {% for letter, items in grouped_details.items() %}
     <div class="card-container" id="{{ letter }}">

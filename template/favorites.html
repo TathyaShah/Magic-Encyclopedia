@@ -6,37 +6,27 @@
     <link rel="stylesheet" href="/static/style.css">
     <title>Document</title>
 </head>
-<h1>Favorites</h1>
 <div class="header flex">
     <div class="filter-container">
         <select id="filter" onchange="filterCreatures()">
             <option value="all">All</option>
-            <option value="flying">Flying</option>
-            <option value="aquatic">Aquatic</option>
             <option value="magical">Magical</option>
+            <option value="pets">Pets</option>
+            <option value="skills">Skills</option>
+            <option value="teams">Teams</option>
+            <option value="characters">Characters</option>
+            <option value="beasts">Beasts</option>
+            <option value="spells">Spells</option>
         </select>
     </div>
     <div class="search-container">
         <input type="text" placeholder="Search" class="btn" id="searchInput">
     </div>
 </div>
-    <h3>Hello, {{ username }}!, here are your favorites</h3>
-
-    <!-- <div class="card-container">
-        {% for item in favorites_data %}
-        <div class="content {{ item.category }}">
-            <div class="heading">
-                <form action="/add_to_favorites/{{ item._id }}" method="post">
-                    <button type="submit"><i class="fa-regular fa-heart favorite"></i></button>
-                </form>
-                <h2>{{ item.heading }}</h2>
-            </div>
-            <img src="{{ item.image_url }}" alt="">
-            <p>{{ item.content }}</p>
-        </div>
-        {% endfor %}
-    </div> -->
-
+    <h3><a href="/" class="home"><i class="fa-solid fa-house" style="color: #00ffff;"></i></i></a></h3>
+    <h1 class="favo">Favorites</h1>
+    <h3 class="helloun">Hello, {{ username }}!, here are your favorites</h3>
+        <div class="single flex">
             {% for item in favorites_data %}
             <div class="popup" id="popup-{{ item._id }}">
                 <div class="overlay"></div>
@@ -58,8 +48,6 @@
             </div>
             {% endfor %}
         </div>
-
-    <!-- <a href="{{ url_for('display_data') }}">Back to Alphabets</a> -->
     <script src="https://kit.fontawesome.com/2c35cb5dcf.js" crossorigin="anonymous"></script>
     <script src="/static/script.js"></script>
 </body>

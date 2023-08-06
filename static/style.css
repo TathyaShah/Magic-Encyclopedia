@@ -118,6 +118,10 @@ input::placeholder{
     padding: 50px 50px;
     color: aqua;
 }
+.dil{
+    scale: 1.5;
+    align-self: center;
+}
 .hogwarts{
     background: url(./bg.jpg);
     background-size:cover;
@@ -140,6 +144,37 @@ input::placeholder{
 }
 .welcome{
     gap: 60px;
+}
+.fav{
+    margin-top: 20px;
+}
+.fav a{
+    border: 3px solid blue;
+    border-radius: 50px;
+    background-color:aqua;
+    padding: 10px 15px;
+    width: 200px;
+    height: 40px;
+    color: blue;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: poppins;
+    font-size: larger;
+}
+.home {
+    margin-top: -15px;
+    margin-left: 20px;
+    float: left;
+    position: absolute;
+    color: aqua;
+    text-decoration: none;
+}
+.favo{
+    margin: 0;
+}
+.helloun{
+    margin-top: 0;
 }
 .here{
     color: blue;
@@ -374,6 +409,7 @@ ul li:hover a{
     width: 95%;
     height: auto;
     text-align: center;
+    border: 2px solid blue;
     border-radius: 15px;
     max-height: 50%;
     margin: -2px -9px;

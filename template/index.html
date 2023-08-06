@@ -22,7 +22,7 @@
             <h1>Filter</h1>
             
             <ul class="list">
-                <li class="dropdown"><a href="#">Magical Objects<span>&rsaquo;</span></a>
+                <!-- <li class="dropdown"><a href="#">Magical Objects<span>&rsaquo;</span></a>
                     <ul class="magical_objects">
                         <li><a href="#">Transportation</a></li>
                         <li><a href="#">Communication</a></li>
@@ -63,10 +63,14 @@
                         <li><a href="#">Ravenclaw</a></li>
                         <li><a href="#">Hufflepuff</a></li>
                     </ul>
-                </li>
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Beasts</a></li>
-                <li><a href="#">Spells</a></li>
+                </li> -->
+                <li><a href="/magical">Magical Objects</a></li>
+                <li><a href="/pets">Pets</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/characters">Characters</a></li>
+                <li><a href="/beasts">Beasts</a></li>
+                <li><a href="/spells">Spells</a></li>
                 <li><a href="/alphabets" target="_blank">Alphabets</a></li>
                 <li><a href="/favorites">Favorites</a></li>
             </ul>
@@ -80,6 +84,7 @@
         <div class="menu flex">
             {% if logged_in %}
             <h3>Hello, {{ user_data.username }}!</h3>
+            <a href="/favorites" class="dil"><i class="fa-solid fa-heart fa-beat" style="color: #ff0000;"></i></a>
             <a href="/logout" class="login_btn">Logout</a>
             {% else %}
             <a href="/login" class="login_btn">Login</a>
@@ -99,7 +104,7 @@
         <h1>New to the <br>Wizarding World ?</h1>
         <div class="welcome flex">
             <h3>Check out the Magic Encyclopedia</h3>
-            <a href="/alphabets" target="_blank" class="here">Here</a>
+            <a href="/alphabets" class="here">Here</a>
         </div>
     </section>
     
